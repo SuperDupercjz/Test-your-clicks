@@ -1,2 +1,2 @@
 # Test-your-clicks
-js
+https://superdupercjz.github.io/Test-your-clicks/
