@@ -8,7 +8,11 @@
     <title>Test-Clickds</title>
 </head>
 <body>
-
+    <div class="column is-11
+    is-offset-1">
+    <h1 class="title is-1">FAST CLICK</h1>
+</div>
+<div id="con">
     <div class="container">
         <div class="columns is-mobile block">
             <div class="column has-background-black is-5"></div>
@@ -41,12 +45,46 @@
         <div id="clicks5" class="column has-background-primary has-text-weight-bold">5+ Clicks</div>
         <div class="column has-background-black is-2"></div>
     </div>
+
 <!-- ................button................ -->
 <div>
     <button class="button is-large is-fullwidth button is-danger is-light has-text-danger">CLICK AS FAST AS YOU CAN</button>
 </div>
-
-
+<!-- email..................................... -->
+<div class="container">
+<div class="control">
+    <div class="field is-horizontal ">
+        <div class="field-label is-normal icon is-left ">
+          <label class="label">From</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <p class="control">
+              <input class="input is-static" type="email" value="FastClick@Gmail.com" readonly>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal icon is-left">
+          <label class="label">To</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <p class="control">
+              <input class="input" type="email" placeholder="Email your score">
+            </p>
+            <button class="button is-danger is-light is-small is-fullwidth">SEND</button>
+            <br>
+            <div class="control">
+                <input class="input" type="text" value="Your Score" readonly>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
 
     
     <script src="click.js"></script>
