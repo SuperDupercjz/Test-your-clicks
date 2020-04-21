@@ -1,26 +1,48 @@
-
-let timeElement = document.querySelector(".time")
+let timeElement = document.querySelector(".time");
 let secondsRemaining = 5;
-
-timeElement.textContent = secondsRemaining + "Seconds Remaining";
-
-let timeIntervalid = setInterval(function(){
-    secondsRemaining--;
-    timeElement.textContent = secondsRemaining + "Seconds Remaining";
-
-    if (secondsRemaining === 0){
-        clearInterval(timeIntervalid);
-    }
-},1000);
-
+let timerRun = false;
+let gameover = false;
+timeElement.textContent = secondsRemaining + " Seconds Remaining";
 // ................................................................................................
-  let clickCount = 0;
-document.querySelector("#clicks").addEventListener("click", function(){
- clickCount++;
-//  timer would go where the 25 is?
-    if (clickCount < 25){
-console.log("clickCount");
-}
+let clickbutton = document.querySelector("#clicks");
+let clickCount = 0;
+//   ..............................................
+clickbutton.addEventListener("click", function () {
+  if (gameover) {
+    // return stops the function
+    return;
+  }
+  clickbutton.textContent = "CLICK AS FAST AS YOU CAN";
+  if (timerRun === false) {
+    timerRun = true;
+    let timeIntervalid = setInterval(function () {
+            if (clickCount === 5) {
+              document.getElementById(5).classList.add("scoreborder");
+
+                console.log("taco")
+            
+            
+            }else if ( clickCount === 10){
+                document.getElementById(10).classList.add("scoreborder");
+                console.log("tacos")
+            }
+      secondsRemaining--;
+      timeElement.textContent = secondsRemaining + " Seconds Remaining";
+      if (secondsRemaining === 0) {
+        timeElement.textContent = secondsRemaining + " Seconds Remaining";
+        clearInterval(timeIntervalid);
+        // timerRun = false you want it to = false to keep going through function
+        timerRun = false;
+        // gameover = true you would want it true to stop the game
+        gameover = true;
+        alert("The game is over! you clicked" + clickCount + " times");
+
+      }
+    }, 1000);
+  }
+  console.log("clickCount");
+  if (timerRun) {
+    clickCount++;
+    console.log(clickCount);
+  }
 });
-
-

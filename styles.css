@@ -17,3 +17,12 @@
 .time{
     padding-left: 550px;
 }
+.numberbutton{
+    margin-left: 670px;
+}
+.hide{
+    display: none;
+}
+.scoreborder{
+    border: orchid 2px solid;
+}
