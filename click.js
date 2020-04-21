@@ -15,17 +15,8 @@ clickbutton.addEventListener("click", function () {
   clickbutton.textContent = "CLICK AS FAST AS YOU CAN";
   if (timerRun === false) {
     timerRun = true;
+    
     let timeIntervalid = setInterval(function () {
-            if (clickCount === 5) {
-              document.getElementById(5).classList.add("scoreborder");
-
-                console.log("taco")
-            
-            
-            }else if ( clickCount === 10){
-                document.getElementById(10).classList.add("scoreborder");
-                console.log("tacos")
-            }
       secondsRemaining--;
       timeElement.textContent = secondsRemaining + " Seconds Remaining";
       if (secondsRemaining === 0) {
@@ -35,14 +26,19 @@ clickbutton.addEventListener("click", function () {
         timerRun = false;
         // gameover = true you would want it true to stop the game
         gameover = true;
-        alert("The game is over! you clicked" + clickCount + " times");
-
+        alert("The game is over! you clicked " + clickCount + " times");
       }
     }, 1000);
   }
   console.log("clickCount");
   if (timerRun) {
-    clickCount++;
+    clickCount++; // 4
+
+    let element = document.getElementById(clickCount)
+    if (element !== undefined) {
+        element.classList.add("scoreborder");
+    }
+    
     console.log(clickCount);
   }
 });
