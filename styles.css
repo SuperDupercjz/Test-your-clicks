@@ -1,3 +1,6 @@
+body{
+    background-image: linear-gradient( yellow, green);
+}
 #con{
     margin-top: 200px;
     margin-top: 50px;
