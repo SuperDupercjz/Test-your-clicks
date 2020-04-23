@@ -30,6 +30,13 @@ clickbutton.addEventListener("click", function () {
       }
     }, 1000);
   }
+  let restart = document.querySelector("#restart");
+  restart.addEventListener("click", function(){
+   if(restart){
+     location.reload();
+   }
+  })
+
   console.log("clickCount");
   if (timerRun) {
     clickCount++; // 4

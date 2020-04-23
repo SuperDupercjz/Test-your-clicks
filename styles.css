@@ -9,16 +9,16 @@ body{
     text-align: center;
 }
 .title{
-   padding-left: 580px;
+  text-align: center;
 }
 .button{
     margin-top: 25px;
 }
 .timerc{
-    padding-left: 810px;  
+    text-align: center;  
 }
 .time{
-    padding-left: 580px;
+    text-align: center;
 }
 .numberbutton{
     margin-left: 670px;
